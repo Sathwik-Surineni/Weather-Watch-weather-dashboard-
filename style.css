@@ -1,0 +1,124 @@
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel Decorative', serif;
+  background-color: #0b0f1a;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ✅ STORMY ANIMATED BACKGROUND */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  object-fit: cover;
+  opacity: 10; /* Adjust visibility */
+  pointer-events: none;
+}
+
+
+/* MAIN CONTENT CONTAINER */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  font-size: 5rem;
+  color: #00f0ff;
+  text-shadow: 0 0 25px #00f0ff, 0 0 60px #00f0ff;
+  letter-spacing: 6px;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.4);
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+/* ⚔️ Weapon-styled underline */
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(to right, transparent, #00f0ff, transparent);
+  transform: translateX(-50%) skewX(-20deg);
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #cfeeff;
+  margin-bottom: 3rem;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  outline: none;
+  min-width: 250px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+button {
+  padding: 0.9rem 1.2rem;
+  background: #00f0ff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* WEATHER CARD GLASS EFFECT */
+.weather-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+  color: #e0faff;
+}
